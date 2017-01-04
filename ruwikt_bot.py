@@ -1,12 +1,12 @@
+'''
+A wiktionary lookup bot for Telegram.
+'''
 import telepot
 from telepot.exception import TelegramError
 from wiktionaryparser import WiktionaryParser
 import sys,time
 
 parser = WiktionaryParser()
-
-def getWord(word):
-  print 'word'
 
 def handle(msg):
   content_type,chat_type,chat_id = telepot.glance(msg)
