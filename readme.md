@@ -1,5 +1,11 @@
-Russian Wiktionary Bot
+Wiktionary Bot
 ======================
 
-A bot that fetches Russian word definitions from the English Wiktionary
-Commands/usage instructions soon.
+A telegram bot that fetches word definitions from English Wiktionary.
+
+Was initially intended to only look up Russian words, but adding full lookup was simple.
+
+Commands: /define <word> <language>
+
+Some wiktionary entries are very long, so it will provide a link if the entry exceeds Telegram's
+character limit.  
