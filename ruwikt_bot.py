@@ -16,12 +16,13 @@ def handle(msg):
 
     if command.startswith('/define '):
       query = command.split()
-      if len(query) != 3:
+      if len(query) < 3:
 	bot.sendMessage(chat_id,'Proper syntax is /define <word> <lang>')
       else:
 	try:
 	  w = query[1]
-	  lang = query[2]
+	  lang = query[2:]
+	  lang = ' '.join(lang)
 	  wiki_link = 'www.wiktionary.org/wiki/'+w
 	  d = parser.fetch(w,lang)[0]['definitions'][0]['text'].encode("utf-8")
 	  bot.sendMessage(chat_id,d)
